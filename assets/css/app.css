@@ -83,11 +83,15 @@ a{
 .flex{
   display: flex;
 }
-
 .justify-between{
   justify-content: space-between;
 }
-
+.items-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
 .items-center{
   align-items: center;
 }
@@ -108,6 +112,118 @@ a{
 /* Header */
 header .navbar{
   margin-top: 48px;
+}
+
+header .navbar .menu a{
+  font-weight: 700;
+  color: var(--black);
+}
+header .navbar .menu a:hover{
+  color: var(--primary);
+}
+
+/*
+*** LANDING 
+*/
+.landing{
+  height: 480px;
+  /* background-color: var(--light); */
+  text-align: center;
+}
+.landing h1{
+  font-weight: 900;
+  font-size: 3.4em;
+  margin-bottom: 30px;
+}
+
+.landing .api-link{
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: 50px;
+  
+}
+.landing .api-link a{
+  padding: 6px 8px;
+  border-bottom: 2px solid var(--primary);
+  margin: 0 8px;
+}
+.landing .api-link a:hover{
+  color: var(--black);
+}
+.landing p{
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 45%;
+}
+
+/* Address-popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--dark);
+}
+.popup .close:hover {
+  color: var(--black);
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  margin-top: 20px;
+}
+.popup .content .flex{
+  margin-bottom: 10px;
+}
+.popup .content .align-start{
+  align-items: start;
+}
+.popup .content img{
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px){
+  .box{
+    width: 75%;
+  }
+  .popup{
+    width: 75%;
+  }
 }
 
 
