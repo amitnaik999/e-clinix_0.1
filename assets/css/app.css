@@ -168,6 +168,12 @@ header .navbar .menu a:hover{
     max-width: 80%;
   }
 }
+@media (max-width:425px){
+  .landing p{
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 /* Address-popup */
 .overlay {
