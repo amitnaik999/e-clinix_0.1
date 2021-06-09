@@ -111,7 +111,13 @@ a{
 
 /* Header */
 header .navbar{
-  margin-top: 48px;
+  margin-top: 20px;
+}
+
+@media (min-width:576px){
+  header .navbar{
+    margin-top: 40px;
+  }
 }
 
 header .navbar .menu a{
@@ -133,28 +139,34 @@ header .navbar .menu a:hover{
 .landing h1{
   font-weight: 900;
   font-size: 3.4em;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 .landing .api-link{
   font-size: 1.6em;
   font-weight: 600;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   
 }
 .landing .api-link a{
-  padding: 6px 8px;
+  padding: 0 8px;
   border-bottom: 2px solid var(--primary);
-  margin: 0 8px;
+  margin: 0 8px 20px 8px;
 }
 .landing .api-link a:hover{
   color: var(--black);
 }
 .landing p{
   text-align: center;
-  margin: 0 auto;
+  margin: 40px auto;
   width: 100%;
-  max-width: 45%;
+  max-width: 40%;
+}
+@media (max-width:768px){
+  .landing p{
+    width: 100%;
+    max-width: 80%;
+  }
 }
 
 /* Address-popup */
@@ -179,9 +191,14 @@ header .navbar .menu a:hover{
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 100%;
   position: relative;
   transition: all 5s ease-in-out;
+}
+@media (min-width:576px){
+  .popup{
+    width: 30%;
+  }
 }
 
 .popup h2 {
